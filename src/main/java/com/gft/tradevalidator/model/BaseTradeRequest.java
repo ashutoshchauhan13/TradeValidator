@@ -2,17 +2,28 @@
 package com.gft.tradevalidator.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.gft.tradevalidator.validators.DateBoundaryConstraint;
 import com.gft.tradevalidator.validators.NonWorkingDayConstraint;
 import com.gft.tradevalidator.validators.ValidCurrencyCode;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+
+@JsonTypeInfo (
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type")
+@JsonSubTypes( {
+        @JsonSubTypes.Type (value = SpotTradeRequest.class, name = "Spot"),
+        @JsonSubTypes.Type (value = ForwardTradeRequest.class, name = "Forward"),
+        @JsonSubTypes.Type (value = VanillaOptionTradeRequest.class, name = "VanillaOption")
+})
 @Data
 @DateBoundaryConstraint.List(
         {@DateBoundaryConstraint(field = "valueDate", fieldMatch = "tradeDate", message = "Value date cannot be before trade date")})

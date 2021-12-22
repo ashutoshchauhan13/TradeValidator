@@ -1,6 +1,6 @@
 package com.gft.tradevalidator.validators;
 
-import com.gft.tradevalidator.model.TradeRequest;
+import com.gft.tradevalidator.model.SpotTradeRequest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -33,7 +33,7 @@ class DateBoundaryConstraintConstraintValidatorTest {
         DateBoundaryConstraintValidator dateBoundaryConstraintValidator = new DateBoundaryConstraintValidator();
         dateBoundaryConstraintValidator.initialize(dateBoundaryConstraint);
 
-        TradeRequest tradeRequest = new TradeRequest();
+        SpotTradeRequest tradeRequest = new SpotTradeRequest();
         tradeRequest.setValueDate(LocalDate.parse("2020-07-15", DateTimeFormatter.ofPattern(DATE_FORMAT_INPUT)));
         tradeRequest.setTradeDate(LocalDate.parse("2020-07-12", DateTimeFormatter.ofPattern(DATE_FORMAT_INPUT)));
 
@@ -50,7 +50,7 @@ class DateBoundaryConstraintConstraintValidatorTest {
         DateBoundaryConstraintValidator dateBoundaryConstraintValidator = new DateBoundaryConstraintValidator();
         dateBoundaryConstraintValidator.initialize(dateBoundaryConstraint);
 
-        TradeRequest tradeRequest = new TradeRequest();
+        SpotTradeRequest tradeRequest = new SpotTradeRequest();
         tradeRequest.setValueDate(LocalDate.parse("2020-06-15", DateTimeFormatter.ofPattern(DATE_FORMAT_INPUT)));
         tradeRequest.setTradeDate(LocalDate.parse("2020-07-12", DateTimeFormatter.ofPattern(DATE_FORMAT_INPUT)));
 
@@ -67,7 +67,7 @@ class DateBoundaryConstraintConstraintValidatorTest {
         DateBoundaryConstraintValidator dateBoundaryConstraintValidator = new DateBoundaryConstraintValidator();
         dateBoundaryConstraintValidator.initialize(dateBoundaryConstraint);
 
-        TradeRequest tradeRequest = new TradeRequest();
+        SpotTradeRequest tradeRequest = new SpotTradeRequest();
         tradeRequest.setValueDate(LocalDate.parse("2020-07-15", DateTimeFormatter.ofPattern(DATE_FORMAT_INPUT)));
         tradeRequest.setTradeDate(LocalDate.parse("2020-07-15", DateTimeFormatter.ofPattern(DATE_FORMAT_INPUT)));
 

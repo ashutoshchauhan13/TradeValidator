@@ -1,5 +1,6 @@
 package com.gft.tradevalidator.controllers;
 
+import com.gft.tradevalidator.model.BaseTradeRequest;
 import com.gft.tradevalidator.model.SpotTradeRequest;
 import com.gft.tradevalidator.model.TradeValidationResponse;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ import java.util.Map;
 public class TradeValidationController {
 
     @PostMapping(value ="/validate", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public TradeValidationResponse validate(@Valid @RequestBody SpotTradeRequest requestBody) {
+    public TradeValidationResponse validate(@Valid @RequestBody BaseTradeRequest requestBody) {
         System.out.println("request body= " + requestBody);
         TradeValidationResponse tradeValidationResponse = new TradeValidationResponse();
         tradeValidationResponse.setMessage("It's a valid trade");
