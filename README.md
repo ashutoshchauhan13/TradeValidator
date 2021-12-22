@@ -1,7 +1,7 @@
 # TradeValidator
 A Trade Validator SpringBoot Restful service
 
-After going through the requirements follwoing strategy was made:
+After going through the requirements following strategy was made:
 
 Bean validation (JSR303 aka Bean Validation 1.0 /JSR349 aka Bean Validation 1.1) is one of the most common ways to perform input validation in Java. It is an application layer agnostic validation spec which provides the developer with the means to define a set of validation constraints on a domain model and then perform validation of those constraints through out the various application tiers.
 
@@ -9,20 +9,20 @@ One advantage of this approach is that the validation constraints and the corres
 
 ![image](https://user-images.githubusercontent.com/2109884/147073789-3fd01b42-3fcb-4f12-ba27-b02625105e0a.png) 
 
-**Typical Validation** [Not prefered in this project]
+**Typical Validation** [Not preferred in this project]
 
 
 
 ![image](https://user-images.githubusercontent.com/2109884/147073848-803111bc-b285-4d6f-a71c-768c0707d70b.png)
 
-**Bean Validation** [Prefered in this project due to securtiy features and advantages it provides]
+**Bean Validation** [Preferred in this project due to security features and advantages it provides]
 
 
 ### Complexity of the project [Important to read]
 
-I found imporant bit is in understanding what to build and strategise it:
+I found important bit is in understanding what to build and strategise it:
 
-1. **Using Class-level constraints**: Since fields value are dependend on other fields we would leveradge the class-level constraint and field level constraint would not be sufficient.
+1. **Using Class-level constraints**: Since fields value are dependent on other fields we would leverage the class-level constraint and field level constraint would not be sufficient.
 2. **Same endpoint accepting different type of Request Data for trade type**: This adds further complexity in the validation as validation need to be dynamic in nature. This is achieved by polymorphism on deserialization using @JsonTypeInfo and @JsonSubTypes with Jackson.
 3. **Non working day and injecting the holidays**: Calculating weekend is super easy but in order to inject the list of holidays we should create a config file and supply it as part of annotation. [Please note injecting the holiday part is still a TODO]
 
@@ -81,7 +81,7 @@ Postman collection with negative and postive tests are part of the project. /pos
 
 ### TODO
 1. Endpoint to accept the Bulk requests
-2. More Test coveradge
+2. More Test coverage
 3. Architecting the application for higher performance (low latency)
 
 ### Time spent so far
@@ -101,6 +101,6 @@ Postman collection with negative and postive tests are part of the project. /pos
 ### Project code is not completed - but it is on right track with right setup
 
 
-Please do let me know if any issues - ashutoshchauhan13@gmail.com. Thank you
+Please do let me know if any issues Thank you
 
 
