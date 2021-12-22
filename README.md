@@ -1,2 +1,2 @@
 # TradeValidator
-A Trade Validator SpringBoot RestFul service
+A Trade Validator SpringBoot Restfull service
