@@ -74,7 +74,18 @@ To run the application, run the following command in a terminal window (in the c
   ./gradlew test 
 ```
 
-### References
+### Postman collection
+
+Postman collection with negative and postive tests are part of the project. /postman directory contains the collection
+
+
+### TODO
+1. Endpoint to accept the Bulk requests
+2. More Test coveradge
+3. Architecting the application for higher performance (low latency)
+
+
+### References (Loved reading the below 😊 article)
 
 
 1. https://docs.jboss.org/hibernate/validator/5.1/reference/en-US/html/validator-customconstraints.html#section-class-level-constraints
