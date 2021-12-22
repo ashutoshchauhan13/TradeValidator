@@ -84,6 +84,9 @@ Postman collection with negative and postive tests are part of the project. /pos
 2. More Test coveradge
 3. Architecting the application for higher performance (low latency)
 
+### Time spent so far
+
+12 hours
 
 ### References (Loved reading the below 😊 article)
 
