@@ -73,3 +73,20 @@ To run the application, run the following command in a terminal window (in the c
 ```console
   ./gradlew test 
 ```
+
+### References
+
+
+1. https://docs.jboss.org/hibernate/validator/5.1/reference/en-US/html/validator-customconstraints.html#section-class-level-constraints
+2. https://github.com/hibernate/hibernate-validator/tree/master/engine/src/main/java/org/hibernate/validator/constraints
+3. https://octoperf.com/blog/2018/02/01/polymorphism-with-jackson/#example
+4. https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/20.0.x?topic=issues-polymorphic-deserialization-jackson-databind-in-xom
+5. https://cheatsheetseries.owasp.org/cheatsheets/Bean_Validation_Cheat_Sheet.html
+
+
+### Project code is not completed - but it is on right track with right setup
+
+
+Please do let me know if any issues - ashutoshchauhan13@gmail.com. Thank you
+
+
