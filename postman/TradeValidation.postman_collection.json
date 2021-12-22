@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "dff6edf7-1754-4615-bb93-105a2e377b48",
+		"name": "TradeValidation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Invalid",
+			"item": [
+				{
+					"name": "invalid ccPair",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer\": \"YODA1\",\n    \"ccyPair\": \"EUR\",\n    \"type\": \"Spot\",\n    \"direction\": \"BUY\",\n    \"tradeDate\": \"2021-08-11\",\n    \"amount1\": 1000000.00,\n    \"amount2\": 1120000.00,\n    \"rate\": 1.12,\n    \"valueDate\": \"2021-08-16\",\n    \"legalEntity\": \"UBS AG\",\n    \"trader\": \"Josef Schoenberger\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/validate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"validate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "invalid ccPair response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer\": \"YODA1\",\n    \"ccyPair\": \"EUR\",\n    \"type\": \"Spot\",\n    \"direction\": \"BUY\",\n    \"tradeDate\": \"2021-08-11\",\n    \"amount1\": 1000000.00,\n    \"amount2\": 1120000.00,\n    \"rate\": 1.12,\n    \"valueDate\": \"2021-08-16\",\n    \"legalEntity\": \"UBS AG\",\n    \"trader\": \"Josef Schoenberger\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/validate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"validate"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 00:52:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ccyPair\": \"Currency pair is not a valid value or valid ISO code\"\n}"
+						}
+					]
+				},
+				{
+					"name": "invalid ccPair length",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer\": \"YODA1\",\n    \"ccyPair\": \"EURUSD\",\n    \"type\": \"Spot\",\n    \"direction\": \"BUY\",\n    \"tradeDate\": \"2021-08-11\",\n    \"amount1\": 1000000.00,\n    \"amount2\": 1120000.00,\n    \"rate\": 1.12,\n    \"valueDate\": \"2021-08-16\",\n    \"legalEntity\": \"HSBC\",\n    \"trader\": \"Josef Schoenberger\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/validate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"validate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "invalid ccPair response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer\": \"YODA1\",\n    \"ccyPair\": \"EUR\",\n    \"type\": \"Spot\",\n    \"direction\": \"BUY\",\n    \"tradeDate\": \"2021-08-11\",\n    \"amount1\": 1000000.00,\n    \"amount2\": 1120000.00,\n    \"rate\": 1.12,\n    \"valueDate\": \"2021-08-16\",\n    \"legalEntity\": \"UBS AG\",\n    \"trader\": \"Josef Schoenberger\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/validate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"validate"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 00:52:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ccyPair\": \"Currency pair is not a valid value or valid ISO code\"\n}"
+						}
+					]
+				},
+				{
+					"name": "invalid legal entity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer\": \"YODA1\",\n    \"ccyPair\": \"EUR\",\n    \"type\": \"Spot\",\n    \"direction\": \"BUY\",\n    \"tradeDate\": \"2021-08-11\",\n    \"amount1\": 1000000.00,\n    \"amount2\": 1120000.00,\n    \"rate\": 1.12,\n    \"valueDate\": \"2021-08-16\",\n    \"legalEntity\": \"UBS AG\",\n    \"trader\": \"Josef Schoenberger\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/validate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"validate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "invalid ccPair response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer\": \"YODA1\",\n    \"ccyPair\": \"EUR\",\n    \"type\": \"Spot\",\n    \"direction\": \"BUY\",\n    \"tradeDate\": \"2021-08-11\",\n    \"amount1\": 1000000.00,\n    \"amount2\": 1120000.00,\n    \"rate\": 1.12,\n    \"valueDate\": \"2021-08-16\",\n    \"legalEntity\": \"UBS AG\",\n    \"trader\": \"Josef Schoenberger\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/validate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"validate"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 Dec 2021 00:52:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ccyPair\": \"Currency pair is not a valid value or valid ISO code\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "valid",
+			"item": [
+				{
+					"name": "ion spring",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer\": \"YODA1\",\n    \"ccyPair\": \"EURUSD\",\n    \"type\": \"Spot\",\n    \"direction\": \"BUY\",\n    \"tradeDate\": \"2021-08-10\",\n    \"amount1\": 1000000.00,\n    \"amount2\": 1120000.00,\n    \"rate\": 1.12,\n    \"valueDate\": \"2021-08-16\",\n    \"legalEntity\": \"UBS AG\",\n    \"trader\": \"Josef Schoenberger\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/validate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"validate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

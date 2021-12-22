@@ -16,11 +16,13 @@ public class NonWorkingDayConstraintValidator implements ConstraintValidator<Non
 
     @Override
     public boolean isValid(LocalDate localDate, ConstraintValidatorContext context) {
+        if (localDate == null) {
+            return false;
+        }
         return !isWeekend(localDate);
     }
 
-    public boolean isWeekend(final LocalDate localDate)
-    {
+    public boolean isWeekend(final LocalDate localDate) {
         DayOfWeek day = DayOfWeek.of(localDate.get(ChronoField.DAY_OF_WEEK));
         return day == DayOfWeek.SUNDAY || day == DayOfWeek.SATURDAY;
     }
