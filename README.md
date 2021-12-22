@@ -88,7 +88,7 @@ Postman collection with negative and postive tests are part of the project. /pos
 
 12 hours
 
-### References (Loved reading the below 😊 article)
+### References (Loved reading the below 😊 articles)
 
 
 1. https://docs.jboss.org/hibernate/validator/5.1/reference/en-US/html/validator-customconstraints.html#section-class-level-constraints
