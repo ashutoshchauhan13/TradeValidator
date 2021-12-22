@@ -14,6 +14,7 @@ One advantage of this approach is that the validation constraints and the corres
 
 
 ![image](https://user-images.githubusercontent.com/2109884/147073848-803111bc-b285-4d6f-a71c-768c0707d70b.png)
+
 **Bean Validation** [Prefered in this project due to securtiy features and advantages it provides]
 
 
